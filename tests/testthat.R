@@ -1,4 +1,4 @@
 library(testthat)
-library(R6P)
+library(mlflow)
 
-test_check("R6P")
+test_check("mlflow")
