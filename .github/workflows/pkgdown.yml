@@ -22,7 +22,6 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@v1
 
       - name: Install system dependencies
-        if: runner.os == 'Linux'
         run: |
           brew install harfbuzz fribidi
 
