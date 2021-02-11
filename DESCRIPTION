@@ -1,10 +1,10 @@
-Package: mlflow
+Package: mockflow
 Type: Package
 Title: Machine-Learning Experiment Management
 URL: https://harell.github.io/mlflow/, https://github.com/harell/mlflow
 BugReports: https://github.com/harell/mlflow/issues
 Version: 0.0.1
-Date: 2021-01-01
+Date: 2020-10-10
 Authors@R: c(
     person("Harel", "Lustiger", email = "harell@gmail.com", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0003-2953-9598")),
@@ -26,7 +26,8 @@ Suggests:
     testthat,
     tibble,
     tidyr
-Imports: 
+Imports:
+    mlflow (>= 1.10.0),
     R6,
     purrr,
     stringr
