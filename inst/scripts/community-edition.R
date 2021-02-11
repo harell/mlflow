@@ -12,8 +12,7 @@ remotes::install_cran("mlflow")
 # https://docs.conda.io/en/latest/miniconda.html
 
 library(mlflow)
-mlflow::install_mlflow(python_version = "3.9")
-# mlflow::mlflow_set_tracking_uri(uri = Sys.getenv("MLFLOW_TRACKING_URI"))
+# mlflow::install_mlflow(python_version = "3.9")
 
 
 # Start -------------------------------------------------------------------
