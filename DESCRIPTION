@@ -1,0 +1,33 @@
+Package: mlflow
+Type: Package
+Title: Machine-Learning Experiment Management
+URL: https://harell.github.io/mlflow/, https://github.com/harell/mlflow
+BugReports: https://github.com/harell/mlflow/issues
+Version: 0.0.1
+Date: 2021-01-01
+Authors@R: c(
+    person("Harel", "Lustiger", email = "harell@gmail.com", role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0003-2953-9598")),
+    person("harell", role = c("cph", "fnd"))
+    )
+Maintainer: Harel Lustiger <tidylab@gmail.com>   
+Description: MLflow is an open source platform to manage the ML lifecycle,
+    including experimentation, reproducibility, deployment, and a central model 
+    registry.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE, r6 = TRUE)
+Language: en-GB
+Depends: 
+    R (>= 3.5)
+Suggests: 
+    testthat,
+    tibble,
+    tidyr
+Imports: 
+    R6,
+    purrr,
+    stringr
+Config/testthat/edition: 3
