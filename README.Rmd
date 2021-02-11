@@ -1,0 +1,32 @@
+---
+output: github_document
+bibliography: [./inst/REFERENCES.bib]
+biblio-style: apalike
+link-citations: yes
+editor_options: 
+  canonical: true
+  markdown: 
+    wrap: 80
+    references: 
+      location: section
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+source(file.path(usethis::proj_get(), "vignettes",  "_common.R"))
+```
+
+# `mlflow` <img src="https://raw.githubusercontent.com/harell/mlflow/master/pkgdown/logo.png" align="right" height="75"/>
+
+<!-- badges: start -->
+[![R build
+status](https://github.com/harell/mlflow/workflows/R-CMD-check/badge.svg)](https://github.com/harell/mlflow/actions)
+[![codecov](https://codecov.io/gh/harell/mlflow/branch/master/graph/badge.svg?token=U6FL5N32FL)](https://codecov.io/gh/harell/mlflow)
+
+<!-- badges: end -->
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics("https://i.imgur.com/73M6VdU.png")
+```
+
