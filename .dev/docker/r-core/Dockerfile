@@ -18,6 +18,12 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     libsasl2-dev \
     unixodbc-dev \
     libsqliteodbc \
+    libharfbuzz-dev \
+    libfribidi-dev \
+    libfreetype6-dev \
+    libpng-dev \
+    libtiff5-dev \
+    libjpeg-dev \
     git \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 

@@ -7,3 +7,15 @@ remotes::install_cran("mlflow")
 # DATABRICKS_USERNAME=your@email.com
 # DATABRICKS_PASSWORD=1234
 
+# https://docs.databricks.com/dev-tools/api/latest/authentication.html
+
+# https://docs.conda.io/en/latest/miniconda.html
+
+library(mlflow)
+mlflow::install_mlflow(python_version = "3.9")
+# mlflow::mlflow_set_tracking_uri(uri = Sys.getenv("MLFLOW_TRACKING_URI"))
+
+
+# Start -------------------------------------------------------------------
+debug(mlflow:::mlflow_rest)
+mlflow_log_param("param1", 5)
