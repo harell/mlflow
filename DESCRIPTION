@@ -1,4 +1,4 @@
-Package: mlflow
+Package: mockflow
 Type: Package
 Title: Machine-Learning Experiment Management
 URL: https://harell.github.io/mlflow/, https://github.com/harell/mlflow
@@ -26,7 +26,8 @@ Suggests:
     testthat,
     tibble,
     tidyr
-Imports: 
+Imports:
+    mlflow (>= 1.12.0),
     R6,
     purrr,
     stringr

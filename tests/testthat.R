@@ -1,4 +1,4 @@
 library(testthat)
-library(mlflow)
+library(mockflow)
 
-test_check("mlflow")
+test_check("mockflow")
