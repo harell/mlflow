@@ -29,5 +29,6 @@ Suggests:
     tidyr
 Imports:
     mlflow (>= 1.10.0),
-    pkgload
+    pkgload,
+    purrr
 Config/testthat/edition: 3
