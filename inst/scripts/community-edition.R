@@ -25,5 +25,5 @@ library(mlflow)
 
 
 # Start -------------------------------------------------------------------
-debug(mlflow:::mlflow_rest)
+# debug(mlflow:::mlflow_rest)
 mlflow_log_param("param1", 5)
