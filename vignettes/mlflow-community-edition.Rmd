@@ -1,0 +1,69 @@
+---
+title: "mlflow Community-edition"
+bibliography: [../inst/REFERENCES.bib]
+biblio-style: apalike
+link-citations: yes
+editor_options: 
+  markdown: 
+    wrap: 80
+---
+
+```{r, include = FALSE}
+source(file.path(usethis::proj_get(), "vignettes",  "_common.R"))
+```
+
+This article describes how to communicate with mlflow hosted on [Databricks Community Edition](https://community.cloud.databricks.com/) website.
+
+## Setup `mlflow` experiment on Databricks Community Edition
+
+1. Sign-in or register [Databricks Community Edition](https://community.cloud.databricks.com/)
+
+2. In the left side-bar, create an experiment by clicking on *Workspace* -> *Create* -> *MLflow Experiment*.
+
+```{r, echo = FALSE, out.width = "50%"}
+knitr::include_graphics("https://i.imgur.com/ggjIm8j.png")
+```
+
+
+## Setup `mlflow` in R
+
+1.  Install `mlflow`
+
+```{r, eval = FALSE, echo = TRUE}
+remotes::install_cran("mlflow")
+library(mlflow)
+mlflow::install_mlflow(python_version = "3.9")
+```
+
+2.  Define the following environment variables in `.Renviron`:
+```
+MLFLOW_TRACKING_URI=databricks
+MLFLOW_EXPERIMENT_ID=3504022373425916
+DATABRICKS_USERNAME=bilbo.baggins@gmail.com
+DATABRICKS_PASSWORD=9nPS5ocV69n2@
+DATABRICKS_HOST=https://community.cloud.databricks.com
+```
+
+Modify the following three variables to fit your Databricks Community Edition details:
+
+* **DATABRICKS_USERNAME**: Your login credentials;
+* **DATABRICKS_PASSWORD**: Your password; and
+* **MLFLOW_EXPERIMENT_ID**: The experiment id (16 digits at the end of the workspace URL).
+
+```{r, message=TRUE}
+message("If you don't have the `.Renviron` file, you can create one with `usethis::edit_r_environ('project')`.")
+```
+
+3. Load `.Renviron` by calling `readRenviron(usethis::proj_path('.Renviron'))`.
+
+```{r, message=TRUE}
+message("If you are using a package file structure for your project, then you could read '.Renviron' every time the package is loaded, i.e. `pkgload::load_all()` by calling `readRenviron` in `.onAttach`. See code snippet.")
+```
+
+```{r, eval=FALSE, echo=TRUE}
+# ./R/zzz.R
+.onAttach <- function(...) {
+    file <- system.file(".Renviron", package = pkgload::pkg_name())
+    suppressWarnings(try(readRenviron(file), silent = TRUE))
+}
+```

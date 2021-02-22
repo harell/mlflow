@@ -1,0 +1,23 @@
+default:
+  MLFLOW_TRACKING_URI: !expr Sys.getenv('MLFLOW_TRACKING_URI', "http://localhost:5000")
+  # Use either MLFLOW_EXPERIMENT_NAME or MLFLOW_EXPERIMENT_ID
+  MLFLOW_EXPERIMENT_NAME: !expr Sys.getenv('MLFLOW_EXPERIMENT_NAME')
+  MLFLOW_EXPERIMENT_ID: !expr Sys.getenv('MLFLOW_EXPERIMENT_ID')
+
+locally:
+  MLFLOW_TRACKING_URI: !expr Sys.getenv("http://localhost:5000")
+
+density:
+  MLFLOW_TRACKING_URI: !expr Sys.getenv('MLFLOW_TRACKING_URI', "http://density.auck.harmonic.co.nz:8787/")
+
+remotely:
+  # https://www.mlflow.org/docs/latest/tracking.html#id68
+  MLFLOW_TRACKING_USERNAME: !expr Sys.getenv('DATABRICKS_USERNAME')
+  MLFLOW_TRACKING_PASSWORD: !expr Sys.getenv('DATABRICKS_PASSWORD')
+  MLFLOW_TRACKING_TOKEN: !expr Sys.getenv('DATABRICKS_TOKEN')
+
+databricks:
+  MLFLOW_TRACKING_URI: databricks
+  DATABRICKS_USERNAME: !expr Sys.getenv('DATABRICKS_USERNAME')
+  DATABRICKS_PASSWORD: !expr Sys.getenv('DATABRICKS_PASSWORD')
+  DATABRICKS_HOST: !expr Sys.getenv('DATABRICKS_HOST')
