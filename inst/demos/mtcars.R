@@ -8,8 +8,6 @@ library(mlflow)
 # browseURL("https://community.cloud.databricks.com/")
 
 
-# mlflow::install_mlflow(python_version = "3.9")
-
 # Start -------------------------------------------------------------------
 # debug(mlflow:::mlflow_rest)
 mlflow_log_param("param1", 5)
