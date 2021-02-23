@@ -67,3 +67,9 @@ message("If you are using a package file structure for your project, then you co
     suppressWarnings(try(readRenviron(file), silent = TRUE))
 }
 ```
+
+
+## Further Reading
+
+* [Track machine learning training runs](https://docs.databricks.com/applications/mlflow/tracking.html)
+* [Compare runs](https://docs.databricks.com/applications/mlflow/tracking.html#compare-runs)
